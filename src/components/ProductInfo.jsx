@@ -1,7 +1,5 @@
-import React, { useState } from "react";
 
-const ProductInfo = () => {
-  const [addMinus, setAddMinus] = useState(1);
+const ProductInfo = ({addMinus, setAddMinus, setCarItems}) => {
 
   return (
     <section className="font-kumbh-sans p-6 md:w-1/2 md:flex md:flex-col md:justify-center md:pr-25">
@@ -32,7 +30,7 @@ const ProductInfo = () => {
           <button
             className="cursor-pointer relative overflow-hidden group rounded-md p-2"
             onClick={() => {
-              setAddMinus(Math.max(0, addMinus - 1));
+              setAddMinus((prev) => Math.max(0, prev - 1));
             }}
           >
             <div className="absolute inset-0 bg-white/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
@@ -46,7 +44,7 @@ const ProductInfo = () => {
           <button
             className="cursor-pointer relative overflow-hidden group rounded-md p-2"
             onClick={() => {
-              setAddMinus(addMinus + 1);
+              setAddMinus((prev) => prev + 1);
             }}
           >
             <div className="absolute inset-0 bg-white/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
@@ -57,7 +55,7 @@ const ProductInfo = () => {
             />
           </button>
         </div>
-        <div className="relative overflow-hidden group flex items-center p-5 bg-orange shadow-xl/30 mb-5 shadow-orange justify-center gap-4 rounded-2xl md:w-3/5 md:shadow-none md:p-3 cursor-pointer">
+        <div onClick={() => setCarItems(addMinus)} className="relative overflow-hidden group flex items-center p-5 bg-orange shadow-xl/30 mb-5 shadow-orange justify-center gap-4 rounded-2xl md:w-3/5 md:shadow-none md:p-3 cursor-pointer">
           <div className="absolute inset-0 bg-white/25 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
           <img src="/images/icon-cart.svg " alt="cart" className="brightness-0 relative z-10 group-hover:opacity-70 transition-opacity duration-200" />
           <p className="font-bold text-xl text-black md:text-lg">Add to cart</p>

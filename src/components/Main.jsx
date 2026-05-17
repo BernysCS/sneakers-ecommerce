@@ -1,12 +1,13 @@
-import React from 'react'
-import ProductInfo from './ProductInfo'
-import ProductGallery from './ProductGallery'
+import React, { useState } from "react";
+import ProductInfo from "./ProductInfo";
+import ProductGallery from "./ProductGallery";
 
-const Main = () => {
+const Main = ({addMinus, setAddMinus, setCarItems}) => {
+  
   return (
     <main className='md:flex md:max-w-6xl md:mx-auto'>
       <ProductGallery/>
-      <ProductInfo/>
+      <ProductInfo addMinus={addMinus} setAddMinus={setAddMinus} setCarItems={setCarItems} />
     </main>
   )
 }
