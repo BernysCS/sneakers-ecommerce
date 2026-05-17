@@ -25,7 +25,7 @@ const Header = ({carItems, setCarItems}) => {
               className="md:hidden w-5 h-5 text-gray-500"
               onClick={() => setMenuOpen(false)}
             />
-            <ul className="flex flex-col font-kumbh-sans font-bold mt-12 text-lg text-very-dark-blue md:flex-row md:mt-0 md:font-normal md:text-base md:text-dark-grayish-blue">
+            <ul className="flex flex-col font-kumbh-sans font-bold mt-12 text-lg text-very-dark-blue md:flex-row md:gap-4 md:mt-0 md:font-normal md:text-base md:text-dark-grayish-blue">
               <li className="relative group">
                 <a href="#" className="py-3 inline-block">
                   Collections

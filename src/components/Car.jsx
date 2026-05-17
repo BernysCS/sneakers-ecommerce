@@ -12,17 +12,17 @@ const Car = ({ cartItems, setCarItems }) => {
           <p>Your cart is empty.</p>
         </div>
       ) : (
-        <div className="p-8 flex flex-col flex-1 md:p-5">
+        <div className="p-4 flex flex-col flex-1 md:p-5">
           <div className="flex-6 mb-8 flex items-center justify-between md:mb-3">
-            <div className="flex justify-between w-[88%]">
+            <div className="flex items-center gap-4 w-full">
               <img
               className="h-[70%] w-17 object-cover self-stretch rounded-sm md:h-full md:w-15 md:rounded-sm"
               src="/images/image-product-1-thumbnail.jpg"
               alt="image product"
               />
 
-              <div>
-                <p className="text-dark-grayish-blue text-lg mb-2 top-0 md:text-base md:mb-0">
+              <div className="flex-1">
+                <p className="text-dark-grayish-blue text-base mb-2 top-0 md:text-base md:mb-0">
                   Fall Limited Edition Sneakers
                 </p>
                 <p className="text-dark-grayish-blue text-lg md:text-base">
